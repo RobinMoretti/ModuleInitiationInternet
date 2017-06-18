@@ -9,27 +9,28 @@
   </head>
   
   <body class="container">
-  <div class="row">
-    <h1 class="twelve columns center">INTERNET</h1>
+  <div class="row center">
+    <h1>L'hypertext!</h1>
   </div>
-  <div class="row">
-    <h3 class="twelve columns center">Chloé Desmoineau & Robin Moretti</h3>
+
+  <div class="row center">
+  <h4>Tim Berners-Lee</h4>
   </div>
   <div class="row center">
-    <img src="https://media.giphy.com/media/3o85xoi6nNqJQJ95Qc/giphy.gif" alt="" class="">
+    <p>« L’HYPERTEXTE EST UN MOYEN DE LIER DES INFORMATIONS DE DIVERSES NATURES ET D’Y ACCÉDER, COMME UN RÉSEAU DE NŒUDS DANS LEQUEL L’UTILISATEUR PEUT NAVIGUER À VOLONTÉ. »1
+  « L’HYPERTEXTE EST DU TEXTE QUI NE SE LIMITE PAS À ÊTRE LINÉAIRE. […] L’HYPERTEXTE EST DU TEXTE QUI CONTIENT DES LIENS VERS D’AUTRES TEXTES. LE TERME A ÉTÉ INVENTÉ PAR TED NELSON VERS 1965. »2</p>
+    </div>
+
+  <div class="row center">
+    <img src="hypertext.png" alt="">
   </div>
-  <!-- <label for="reponse" >Reponse</label>
-  <input type="text" id="reponse" placeholder="Ecris ton texte"> -->
-  <!-- 
-  <button name="send" type="button" onmousedown="sendToReponse(document.getElementById('reponse').value)">
-    Send
-  </button> -->
 
 
   <div class="row center">
-    <a class="button" href="1.html">Suivant</a>
+    <a class="button" href="12.php">Suivant</a>
   </div>
-  
+
+
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -71,12 +72,13 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
+            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-      },100);
 
+      },100);
     }
 
 
@@ -185,6 +187,9 @@
     }
 
     function sendToReponse(text) {
+      if(text == ""){
+        break;
+      }
       // recuperation des donnés de la page html
       var id = document.getElementById('id').textContent;
       var reponse = " " +  text;

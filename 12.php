@@ -9,19 +9,15 @@
   </head>
   
   <body class="container">
+
+  <div class="row center">
+    <h1>Do it yourself!</h1>
+  </div>
+
   <div class="row">
-    <h1 class="twelve columns center">Internet, c'est quoi? </h1>
+  <textarea name="code" id="code" cols="30" rows="10" class="six columns"><a href=""></a></textarea>
+  <div id="view" class="six columns"></div>
   </div>
-
-  <div class="row center">
-    <textarea class="u-full-width"  placeholder="Internet, pour moi c'est ..." name="send" id="reponse" cols="30" rows="10"></textarea>
-  </div>
-
-  <div class="row center">
-    <a class="button" href="2.html" onmousedown="sendToReponse(document.getElementById('reponse').value, e)">Suivant</a>
-  </div>
-
-
   
   <div id="data" class="hide">
     <h2>DATA:</h2>
@@ -37,6 +33,20 @@
   </body>
 
   <script>
+  var area = document.querySelector('textarea');
+  if (area.addEventListener) {
+    area.addEventListener('input', function() {
+      console.log(area.value);
+      // IE-specific event handling code
+      document.getElementById("view").innerHTML = area.value;
+    }, false);
+  } else if (area.attachEvent) {
+    area.attachEvent('onpropertychange', function() {
+      console.log(area.value);
+      // IE-specific event handling code
+      document.getElementById("code").innerHTML = area.value;
+    });
+  }
 
     var dataElem;
     var interval;
@@ -64,12 +74,13 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
+            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-      },100);
 
+      },100);
     }
 
 
@@ -178,6 +189,9 @@
     }
 
     function sendToReponse(text) {
+      if(text == ""){
+        break;
+      }
       // recuperation des donnés de la page html
       var id = document.getElementById('id').textContent;
       var reponse = " " +  text;

@@ -9,16 +9,21 @@
   </head>
   
   <body class="container">
+  <div class="row center">
+    <h1>NEUTRALITÉ DU NET</h1>
+    <p>On peut croire que tout le monde a accès a internet gratuitement et librement. Quand internet a été crée, c’était le but : on appelle ça la neutralité du net . <p>
+
+  </div>
 
   <div class="row center">
-    <h1>Do it yourself!</h1>
+  <img src="neutralité.png" class="" alt="">
   </div>
 
-  <div class="row">
-  <textarea name="code" id="code" cols="30" rows="10" class="six columns"></textarea>
-  <div id="view" class="six columns"></div>
+  <div class="row center">
+    <a class="button" href="13.php">Suivant</a>
   </div>
-  
+
+
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -33,20 +38,6 @@
   </body>
 
   <script>
-  var area = document.querySelector('textarea');
-  if (area.addEventListener) {
-    area.addEventListener('input', function() {
-      console.log(area.value);
-      // IE-specific event handling code
-      document.getElementById("view").innerHTML = area.value;
-    }, false);
-  } else if (area.attachEvent) {
-    area.attachEvent('onpropertychange', function() {
-      console.log(area.value);
-      // IE-specific event handling code
-      document.getElementById("code").innerHTML = area.value;
-    });
-  }
 
     var dataElem;
     var interval;

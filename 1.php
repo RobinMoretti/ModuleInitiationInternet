@@ -9,17 +9,20 @@
   </head>
   
   <body class="container">
-
   <div class="row">
-  <img src="server1.jpg" class="six columns" alt="">
-  <img src="server2.jpg" class="six columns" alt="">
+    <h1 class="twelve columns center">Internet, c'est quoi? </h1>
   </div>
 
   <div class="row center">
-    <a class="button" href="9.html">Suivant</a>
+    <textarea class="u-full-width"  placeholder="Internet, pour moi c'est ..." name="send" id="reponse" cols="30" rows="10"></textarea>
+  </div>
+
+  <div class="row center">
+    <a class="button" href="2.php" onmousedown="sendToReponse(document.getElementById('reponse').value, e)">Suivant</a>
   </div>
 
 
+  
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -61,13 +64,12 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
-            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-
       },100);
+
     }
 
 
@@ -176,9 +178,6 @@
     }
 
     function sendToReponse(text) {
-      if(text == ""){
-        break;
-      }
       // recuperation des donnés de la page html
       var id = document.getElementById('id').textContent;
       var reponse = " " +  text;

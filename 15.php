@@ -10,17 +10,15 @@
   
   <body class="container">
   <div class="row center">
-    <h1>GOOGLE!</h1>
+    <h1>GAFA : LES GÉANTS DU WEB</h1>
+    <p> GOOGLE-APPLE-FACEBOOK-AMANZON</p>
   </div>
   <div class="row center">
-    <h4>Depuis quand google existe?</h4>
-  </div>
-  <div class="row center">
-    <textarea class="u-full-width"  placeholder="L'url c'est..." name="send" id="reponse" cols="30" rows="10"></textarea>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/2ysAkSornqM" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="row center">
-    <a class="button" href="4.html" onmousedown="sendToReponse(document.getElementById('reponse').value)">Suivant</a>
+    <a class="button" href="15.php">Suivant</a>
   </div>
 
 

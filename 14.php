@@ -9,21 +9,19 @@
   </head>
   
   <body class="container">
-
-  <div class="row">
-    <h1 class="twelve columns center">Tout dabord, un peu d'histoire!</h1>
+  <div class="row center">
+    <h1>DATA-BIG DATA</h1>
+  </div>
+<p><strong>Une data<strong> c’est une information ( par exemple ton âge, ton sexe, ta localisation, qu’est-ce que tu as l’habitude d’acheter, qu’est-ce que tu regardes à la télé…). <strong>La big data<strong> c'est la quantité immense de données récupérées sur internet.<p>
+  <div class="row center">
+  <img src="Cartographie.png" class="" alt="">
   </div>
 
   <div class="row center">
-    <img src="https://media.giphy.com/media/eCwAEs05phtK/giphy.gif" alt="" class="">
-  </div>
-
-  <div class="row center">
-    <a class="button" href="3.html">Suivant</a>
+    <a class="button" href="14.php">suivant</a>
   </div>
 
 
-  
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -65,12 +63,13 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
+            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-      },100);
 
+      },100);
     }
 
 

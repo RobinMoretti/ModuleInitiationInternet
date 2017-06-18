@@ -9,20 +9,19 @@
   </head>
   
   <body class="container">
-
-  <div class="row">
-    <h1 class="twelve columns center">L'url c'est quoi ? </h1>
+  <div class="row center">
+    <h1>Centralisé</h1>
   </div>
 
   <div class="row center">
-    <textarea class="u-full-width"  placeholder="L'url c'est..." name="send" id="reponse" cols="30" rows="10"></textarea>
+  <img src="https://media.giphy.com/media/l4FGtx0zCnrFGIXIc/giphy.gif" class="" alt="">
   </div>
 
   <div class="row center">
-    <a class="button" href="4.html" onmousedown="sendToReponse(document.getElementById('reponse').value)">Suivant</a>
+    <a class="button" href="11.php">Suivant</a>
   </div>
 
-  
+
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -64,12 +63,13 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
+            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-      },100);
 
+      },100);
     }
 
 

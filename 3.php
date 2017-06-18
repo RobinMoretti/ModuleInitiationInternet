@@ -9,28 +9,20 @@
   </head>
   
   <body class="container">
-  <div class="row center">
-    <h1>L'hypertext!</h1>
+
+  <div class="row">
+    <h1 class="twelve columns center">L'url c'est quoi ? </h1>
   </div>
 
   <div class="row center">
-  <h4>Tim Berners-Lee</h4>
-  </div>
-  <div class="row center">
-    <p>« L’HYPERTEXTE EST UN MOYEN DE LIER DES INFORMATIONS DE DIVERSES NATURES ET D’Y ACCÉDER, COMME UN RÉSEAU DE NŒUDS DANS LEQUEL L’UTILISATEUR PEUT NAVIGUER À VOLONTÉ. »1
-  « L’HYPERTEXTE EST DU TEXTE QUI NE SE LIMITE PAS À ÊTRE LINÉAIRE. […] L’HYPERTEXTE EST DU TEXTE QUI CONTIENT DES LIENS VERS D’AUTRES TEXTES. LE TERME A ÉTÉ INVENTÉ PAR TED NELSON VERS 1965. »2</p>
-    </div>
-
-  <div class="row center">
-    <img src="hypertext.png" alt="">
+    <textarea class="u-full-width"  placeholder="L'url c'est..." name="send" id="reponse" cols="30" rows="10"></textarea>
   </div>
 
-
   <div class="row center">
-    <a class="button" href="12.html">Suivant</a>
+    <a class="button" href="4.php" onmousedown="sendToReponse(document.getElementById('reponse').value)">Suivant</a>
   </div>
 
-
+  
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -72,13 +64,12 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
-            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-
       },100);
+
     }
 
 

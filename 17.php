@@ -10,15 +10,16 @@
   
   <body class="container">
   <div class="row center">
-    <h1>Centralisé</h1>
+    <h2>Le hacker bidouilleur</h2>
+  </div>
+<p>Hacker, ca veut dire détourner, bidouiller. Hacker ce n’est pas forcément mal, au contraire ça veut dire que tu veux comprendre comment quelque chose fonctionne et que tu as la créativité pour essayer de l’utiliser différemment.<p>
+  <div class="row center">
+  <iframe src="https://player.vimeo.com/video/101620328" width="640" height="512" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p> Ca par exemple c'est du hack d'un jouet d'enfant pour en faire de la musique, ca s'appelle du circuit bending</p>
   </div>
 
   <div class="row center">
-  <img src="https://media.giphy.com/media/l4FGtx0zCnrFGIXIc/giphy.gif" class="" alt="">
-  </div>
-
-  <div class="row center">
-    <a class="button" href="11.html">Suivant</a>
+    <a class="button" href="11.php">suivant</a>
   </div>
 
 

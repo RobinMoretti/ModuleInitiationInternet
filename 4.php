@@ -11,13 +11,19 @@
   <body class="container">
 
   <div class="row">
-  <img src="url.jpeg" alt="" class="twelve columns">
+    <h1 class="twelve columns center">Url = Adresse</h1>
   </div>
+
   <div class="row center">
-    <a class="button" href="7.html">Suivant</a>
+    <img src="https://media.giphy.com/media/qPVzemjFi150Q/giphy.gif" alt="" class="">
+  </div>
+
+  <div class="row center">
+    <a class="button" href="5.php">Suivant</a>
   </div>
 
 
+  
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -59,13 +65,12 @@
           if(document.getElementById("dump").textContent != "" && document.getElementById("ip").innerHTML != ""){
             clearInterval(interval);
             setUser();
-            document.getElementById("adresseIp").textContent = document.getElementById("ip").innerHTML;
           }
         } catch(e) {
           // console.log(e);
         } 
-
       },100);
+
     }
 
 

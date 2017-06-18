@@ -11,14 +11,12 @@
   <body class="container">
 
   <div class="row">
-    <h1 class="twelve columns center">Internet, c'est physique!</h1>
+  <img src="server1.jpg" class="six columns" alt="">
+  <img src="server2.jpg" class="six columns" alt="">
   </div>
-  <div class="row">
-    <iframe src="http://submarine-cable-map-2014.telegeography.com/" frameborder="0" class="twelve columns"></iframe>
-  </div>
-  
+
   <div class="row center">
-    <a class="button" href="8.html">Suivant</a>
+    <a class="button" href="9.php">Suivant</a>
   </div>
 
 

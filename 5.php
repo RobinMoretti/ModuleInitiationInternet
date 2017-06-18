@@ -9,16 +9,18 @@
   </head>
   
   <body class="container">
-  <div class="row center">
-    <h1>Centralisé</h1>
-  </div>
 
-  <div class="row center">
-  <img src="https://media.giphy.com/media/l4FGtx0zCnrFGIXIc/giphy.gif" class="" alt="">
+  <div class="row">
+    <h1 class="twelve columns center">Adresse = IP</h1>
   </div>
-
+  <div class="row">
+    <h4 class="twelve columns center">Votre adresse IP est:</h4>
+  </div>
+  <div class="row">
+    <h4 class="twelve columns center" id="adresseIp"></h4>
+  </div>
   <div class="row center">
-    <a class="button" href="11.html">Suivant</a>
+    <a class="button" href="6.php">Suivant</a>
   </div>
 
 
