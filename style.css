@@ -1,0 +1,23 @@
+.hide{
+	visibility: hidden;
+}
+
+body{
+	padding-top: 5% !important;
+}
+
+h1{
+}
+
+.center{
+	text-align: center;
+}
+
+textarea{
+	max-width: 500px;
+	min-height: 300px;
+}
+
+iframe{
+	min-height: 800px !important;
+}

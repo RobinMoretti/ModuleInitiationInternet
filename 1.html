@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <meta charset="UTF-8">
      <link rel="stylesheet" href="normalize.css">
      <link rel="stylesheet" href="skeleton.css">
      <link rel="stylesheet" href="style.css">
@@ -8,23 +10,27 @@
   
   <body class="container">
   <div class="row">
-    <h1></h1>
+    <h1 class="twelve columns center">Internet, c'est quoi? </h1>
   </div>
-  <label for="reponse" >Reponse</label>
-  <input type="text" id="reponse" placeholder="Ecris ton texte">
-  
-  <button name="send" type="button" onmousedown="sendToReponse(document.getElementById('reponse').value)">
-    Send
-  </button>
 
-  <div id="data">
+  <div class="row center">
+    <textarea class="u-full-width"  placeholder="Internet, pour moi c'est ..." name="send" id="reponse" cols="30" rows="10"></textarea>
+  </div>
+
+  <div class="row center">
+    <a class="button" href="2.html" onmousedown="sendToReponse(document.getElementById('reponse').value, e)">Suivant</a>
+  </div>
+
+
+  
+  <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
   </div>
 
-  <p id="dump"></p>
+  <p id="dump" class="hide"></p>
   
-	<button name="dump" type="button" onmousedown="dumpData()">
+	<button name="dump" type="button" onmousedown="dumpData()" class="hide">
 		Dump
 	</button>
 	

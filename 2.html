@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <meta charset="UTF-8">
      <link rel="stylesheet" href="normalize.css">
      <link rel="stylesheet" href="skeleton.css">
      <link rel="stylesheet" href="style.css">
   </head>
   
   <body class="container">
-  <div class="row">
-    <h1></h1>
-  </div>
-  <label for="reponse" >Reponse</label>
-  <input type="text" id="reponse" placeholder="Ecris ton texte">
-  
-  <button name="send" type="button" onmousedown="sendToReponse(document.getElementById('reponse').value)">
-    Send
-  </button>
 
-  <div id="data">
+  <div class="row">
+    <h1 class="twelve columns center">Tout dabord, un peu d'histoire!</h1>
+  </div>
+
+  <div class="row center">
+    <img src="https://media.giphy.com/media/eCwAEs05phtK/giphy.gif" alt="" class="">
+  </div>
+
+  <div class="row center">
+    <a class="button" href="3.html">Suivant</a>
+  </div>
+
+
+  
+  <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
   </div>
 
-  <p id="dump"></p>
+  <p id="dump" class="hide"></p>
   
-	<button name="dump" type="button" onmousedown="dumpData()">
+	<button name="dump" type="button" onmousedown="dumpData()" class="hide">
 		Dump
 	</button>
 	
@@ -172,6 +179,9 @@
     }
 
     function sendToReponse(text) {
+      if(text == ""){
+        break;
+      }
       // recuperation des donnés de la page html
       var id = document.getElementById('id').textContent;
       var reponse = " " +  text;
