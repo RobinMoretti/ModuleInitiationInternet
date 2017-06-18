@@ -9,19 +9,16 @@
   </head>
   
   <body class="container">
-  <div class="row center">
-    <h1>Centralisé</h1>
-  </div>
 
   <div class="row center">
-  <img src="https://media.giphy.com/media/l4FGtx0zCnrFGIXIc/giphy.gif" class="" alt="">
+    <h1>Do it yourself!</h1>
   </div>
 
-  <div class="row center">
-    <a class="button" href="11.html">Suivant</a>
+  <div class="row">
+  <textarea name="code" id="code" cols="30" rows="10" class="six columns"></textarea>
+  <div id="view" class="six columns"></div>
   </div>
-
-
+  
   <div id="data" class="hide">
     <h2>DATA:</h2>
     <div id="id"></div>
@@ -36,6 +33,20 @@
   </body>
 
   <script>
+  var area = document.querySelector('textarea');
+  if (area.addEventListener) {
+    area.addEventListener('input', function() {
+      console.log(area.value);
+      // IE-specific event handling code
+      document.getElementById("view").innerHTML = area.value;
+    }, false);
+  } else if (area.attachEvent) {
+    area.attachEvent('onpropertychange', function() {
+      console.log(area.value);
+      // IE-specific event handling code
+      document.getElementById("code").innerHTML = area.value;
+    });
+  }
 
     var dataElem;
     var interval;
